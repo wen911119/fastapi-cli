@@ -1,0 +1,36 @@
+{
+  "name": "@ruiyun/fastapi-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bin/command.js",
+  "bin": {
+    "fastapi": "src/bin/command.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "node src/bin/command.js create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wen911119/fastapi-cli.git"
+  },
+  "keywords": [
+    "fastify",
+    "api",
+    "framework",
+    "cli"
+  ],
+  "author": "wen911119@gmail.com",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/wen911119/fastapi-cli/issues"
+  },
+  "homepage": "https://github.com/wen911119/fastapi-cli#readme",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "fs-extra": "^8.0.1",
+    "gittar": "^0.1.1",
+    "inquirer": "^6.3.1",
+    "minimist": "^1.2.0"
+  }
+}
