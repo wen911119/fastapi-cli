@@ -16,7 +16,7 @@ class Dog extends API {
     } else {
       reply.status(400).send({
         error: 10001,
-        message: errMsg.toString()
+        message: errMsg
       })
     }
     
