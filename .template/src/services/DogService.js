@@ -6,6 +6,8 @@ class DogService extends Service {
     if (id % 3 === 2) {
       // 随机报错
       throw new Error("生成dogId失败");
+    } else if (id % 3 === 1) {
+      console.log(a.b)
     }
     return {
       name,
