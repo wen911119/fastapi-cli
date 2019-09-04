@@ -18,7 +18,7 @@ module.exports = async function (directory) {
   await gittar.extract(archive, path.resolve(process.cwd(), directory), {
     strip: 2,
     filter (path, obj) {
-      if (path.includes('/template/')) {
+      if (path.includes('/.template/')) {
         return true
       }
     }
