@@ -7,7 +7,7 @@
     "debug": "babel-node test.js"
   },
   "dependencies": {
-    "@ruiyun/fastapi": "^1.0.3"
+    "@ruiyun/fastapi": "^1.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
