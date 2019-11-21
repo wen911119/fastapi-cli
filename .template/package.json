@@ -4,7 +4,8 @@
     "dev": "nodemon --exec babel-node src/index.js",
     "build": "babel src --out-dir dist",
     "serve": "node dist/index.js",
-    "debug": "babel-node test.js"
+    "debug": "babel-node test.js",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore"
   },
   "dependencies": {
     "@ruiyun/fastapi": "^1.0.4"
@@ -16,11 +17,18 @@
     "@babel/plugin-proposal-decorators": "^7.6.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "nodemon": "^1.19.4"
-  }
+    "nodemon": "^1.19.4",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.19.1"
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }

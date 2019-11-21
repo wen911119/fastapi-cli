@@ -3,29 +3,29 @@ module.exports = {
     exposeRoute: true,
     swagger: {
       info: {
-        title: "Test swagger",
-        description: "testing the api",
-        version: "0.1.0"
+        title: 'Test swagger',
+        description: 'testing the api',
+        version: '0.1.0'
       },
       externalDocs: {
-        url: "https://swagger.io",
-        description: "Find more info here"
+        url: 'https://swagger.io',
+        description: 'Find more info here'
       },
-      consumes: ["application/json"],
-      produces: ["application/json"],
+      consumes: ['application/json'],
+      produces: ['application/json'],
       tags: [
-        { name: "user", description: "User related end-points" },
-        { name: "code", description: "Code related end-points" }
+        { name: 'user', description: 'User related end-points' },
+        { name: 'code', description: 'Code related end-points' }
       ],
       securityDefinitions: {
         apiKey: {
-          type: "apiKey",
-          name: "apiKey",
-          in: "header"
+          type: 'apiKey',
+          name: 'apiKey',
+          in: 'header'
         }
       }
     }
-  },
+  }
   // eureka: {
   //   name: "fastapi-project", // 这个应用注册到eureka的名字
   //   version: "1.0.0",

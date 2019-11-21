@@ -1,16 +1,17 @@
-const { API, Router } = require("@ruiyun/fastapi")
+const { API, Router } = require('@ruiyun/fastapi')
 const { Post } = Router
 
-const {
-  addDogSchema
-} = require("../schemas/dog.schema.js")
+const { addDogSchema } = require('../schemas/dog.schema.js')
 
 class Dog extends API {
-
-  @Post("/add", addDogSchema)
-  async add (request, reply) {
+  @Post('/add', addDogSchema)
+  async add(request, reply) {
     const { name, age, color } = request.body
-    const { success, data, errMsg } = await this.service.DogService.add({name, age, color})
+    const { success, data, errMsg } = await this.service.DogService.add({
+      name,
+      age,
+      color
+    })
     if (success) {
       reply.send(data)
     } else {
@@ -19,7 +20,6 @@ class Dog extends API {
         message: errMsg
       })
     }
-    
   }
 }
 
